@@ -1,15 +1,16 @@
 import React from 'react'
 import HeroDetail from './HeroDetail';
 import Row from 'react-bootstrap/Row'
-
-const [total, setTotal] = useState(0);
-
-const totalCountHandler = (name) =>{
-        console.log(name)
-        setTotal(total+1);       
-}
+import { useState } from 'react';
 
 const AllHeroes = () => {
+    const [total, setTotal] = useState(0);
+
+    const totalCountHandler = (name) =>{
+        console.log(name)
+        setTotal(total+1);       
+    }
+
     const heroes = [
         {"id":1,"name":"Bruce Wayne","alias":"Batman","superpower":"Martial Arts","teamID":1},
         {"id":2,"name":"Clark Kent","alias":"Superman","superpower":"Flight","teamID":1},

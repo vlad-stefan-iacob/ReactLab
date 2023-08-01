@@ -2,15 +2,20 @@ import React from 'react'
 import images from '../index'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import { useState } from 'react';
 
-const[counter, setCounter] = useState(0);
 
-const incrementCounter =()=>{
-      setCounter(counter+1);
-      props.parentCount(props.info.alias);
-}
 
 const HeroDetail = (props) => {
+
+  const[counter, setCounter] = useState(0);
+
+  const incrementCounter =()=>{
+        setCounter(counter+1);
+        props.parentCount(props.info.alias);
+  }
     return (
       <Card >
         <div className="imgContainer">
