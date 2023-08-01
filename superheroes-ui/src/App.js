@@ -6,7 +6,8 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function App() {
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
+      <>
+      <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
             <Navbar.Brand href="#home">Heroes</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -17,7 +18,14 @@ function App() {
               </Nav>
             </Navbar.Collapse>
           </Container>    
-        </Navbar>  
+        </Navbar> 
+        <Routes>
+          <Route path="allheroes" element={<AllHeroes/>} />
+          <Route path="addhero" element={<HeroForm/>} />
+          <Route path="/" element={<AllHeroes/>} />
+        </Routes>
+      </>
+         
         
       );
 }
